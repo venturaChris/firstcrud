@@ -108,16 +108,20 @@ function AddData(){
 //funçao para deletar do local storage
 
 function deleteData(index){
-    var listaPessoas;
-        if (localStorage.getItem("listaPessoas") == null){
-            listaPessoas = [];}
-            else {
-                listaPessoas = JSON.parse(localStorage.getItem("listaPessoas"));
-            }
 
-            listaPessoas.splice(index, 1);
-            localStorage.setItem("listaPessoas", JSON.stringify(listaPessoas));
-            showData();
+    var listaPessoas;
+    if (localStorage.getItem("listaPessoas") == null){
+        listaPessoas = [];
+    }
+    else
+    {
+        listaPessoas = JSON.parse(localStorage.getItem("listaPessoas"));
+    }
+
+    listaPessoas.splice(index, 1);
+    localStorage.setItem("listaPessoas", JSON.stringify(listaPessoas));
+    showData();
+        
 }
 
 //funçao para atualizar e editar no local storage
