@@ -7,17 +7,17 @@ function validateform()
     var email = document.getElementById("email").value;
 
 
-    if (nome =""){
+    if (nome ==""){
     alert("requer o nome");
     return false;
     }
 
-    if (idade =""){
+    if (idade ==""){
     alert("requer a idade");
     return false;
     }
 
-    else if (idade > 1){
+    else if (idade < 1){
     alert("a idade nao pode ser zero ou menor que zero.");
     return false;
     }
@@ -46,7 +46,7 @@ function showData(){
         listaPessoas = [];
     }
     else {
-        listaPessoas = JSON.parse(localStorage.getItem("listaPessoas"));
+        listaPessoas = JSON.parse(localStorage.getItem("listaPessoas"))
     }
    var html = "";
 
@@ -57,8 +57,7 @@ function showData(){
     html += "<td>" + element.idade + "</td>";
     html += "<td>" + element.endereco + "</td>";
     html += "<td>" + element.email + "</td>";
-    html += 
-    '<td><button onclick="deletarinfo('+index+')"class="btn btn-danger">deletar</button> <button onclick="atualizar('+index+')"class="btn btn-warning m-2">editar</button></td>';
+    html += '<td><button onclick="deleteData('+index+')"class="btn btn-danger">Deletar</button> <button onclick="updateData('+index+')"class="btn btn-warning m-2">Editar</button></td>';
     html +=  "</tr>";
    });
    document.querySelector("#crudTable tbody").innerHTML = html;
@@ -126,7 +125,7 @@ function deleteData(index){
 
 //funçao para atualizar e editar no local storage
 
-function UpdateData(index){
+function updateData(index){
     document.getElementById("submit").style.display = "none";
     document.getElementById("update").style.display = "block";
     var listaPessoas;

@@ -1,9 +1,12 @@
 body{
-    background-color: rgb(248, 246, 215);
+    background: #73a7e2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 *{
-    color: rgb(36, 33, 33);
+    color: rgb(#fff);
 }
+
 #update{
     display: none;
 }
