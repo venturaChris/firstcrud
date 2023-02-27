@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>CRUD</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body class="body">
+    
+  <div class="container">
+        <h2 class="mt-5 mb-5"> CRUD EM LOCAL STORAGE</h2>
+        <div class="mb-5">
+            <div class="row">
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">NOME</label>
+
+                    <input 
+                    type="text"
+                    name="nome" 
+                    class="form-control" 
+                    id="nome" placeholder="digite seu nome"/>
+                    </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">IDADE</label>
+
+                    <input 
+                    type="text"
+                    name="nome" 
+                    class="form-control" 
+                    id="nome" placeholder="digite sua idade"/>
+                   </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">ENDEREÇO</label>
+
+                    <input 
+                    type="text"
+                    name="nome" 
+                    class="form-control" 
+                    id="nome" placeholder="digite seu endereço"/>
+                    </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">EMAIL</label>
+
+                    <input 
+                    type="text"
+                    name="nome" 
+                    class="form-control" 
+                    id="nome" placeholder="digite seu email"/>
+                    </div>
+
+                    <div class="col-lg-12 mt-5">
+                    <button class="btn btn-success" id="submit" onclick="AddData()">add new</button>
+
+                    <button class="btn btn-primary" id="update" >update</button>
+                </div>
+
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <div class="col-12">
+                <table class="table table-bordered" id="crudtable">
+                    <thead>
+                        <tr>
+                            <th>nome</th>
+                            <th>idade</th>
+                            <th>endereço</th>
+                            <th>email</th>
+                            <th>açoes</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
